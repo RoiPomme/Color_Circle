@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circle Color App</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ffffff">
+</head>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./service-worker.js');
+    });
+  }
+</script>
+<body>
+  <div id="circle"></div>
+
+  <div id="buttons">
+    <button onclick="changeColor('red')">Red</button>
+    <button onclick="changeColor('green')">Green</button>
+    <button onclick="changeColor('blue')">Blue</button>
+    <button onclick="changeColor('yellow')">Yellow</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
